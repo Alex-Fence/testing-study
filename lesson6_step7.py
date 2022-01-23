@@ -3,10 +3,11 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
-
+from webdriver_manager.chrome import ChromeDriverManager
 
 try:
-    browser = webdriver.Chrome()
+    #browser = webdriver.Chrome()
+    browser = webdriver.Chrome(executable_path=ChromeDriverManager().install())
     browser.get("http://suninjuly.github.io/huge_form.html")
     #поместить все строки содержащие тег input в список
     elements = browser.find_elements(By.TAG_NAME, "input")
