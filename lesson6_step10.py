@@ -2,13 +2,13 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 # Это нужно для запуска из  Линукс
-# from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.chrome import ChromeDriverManager
 
 try:
-    link = "http://suninjuly.github.io/registration2.html"
+    link = "http://suninjuly.github.io/registration1.html"
     # Это нужно для запуска из  Линукс
-    # browser = webdriver.Chrome(executable_path=ChromeDriverManager().install())
-    browser = webdriver.Chrome()
+    browser = webdriver.Chrome(executable_path=ChromeDriverManager().install())
+    # browser = webdriver.Chrome()
     browser.get(link)
 
     browser.find_element(By.CSS_SELECTOR,
