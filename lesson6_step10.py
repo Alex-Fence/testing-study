@@ -1,20 +1,17 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-import time
-# Это нужно для запуска из  Линукс
 from webdriver_manager.chrome import ChromeDriverManager
+import time
 
 try:
     link = "http://suninjuly.github.io/registration1.html"
-    # Это нужно для запуска из  Линукс
     browser = webdriver.Chrome(executable_path=ChromeDriverManager().install())
-    # browser = webdriver.Chrome()
+    # browser = webdriver.Chrome() это для стандартных настроек webdriver
     browser.get(link)
-
     browser.find_element(By.CSS_SELECTOR,
-                         '[class="form-control first"][placeholder="Input your first name"]').send_keys("Ivan")
+                         '[placeholder="Input your first name"]').send_keys("Ivan")
     browser.find_element(By.CSS_SELECTOR,
-                         '[class="form-control second"][placeholder="Input your last name"]').send_keys("Petrov")
+                         '[placeholder="Input your last name"]').send_keys("Petrov")
     browser.find_element(By.CSS_SELECTOR, '[placeholder="Input your email"]').send_keys("test@email.ru")
     browser.find_element(By.CSS_SELECTOR, '[placeholder="Input your phone:"]').send_keys("12345678")
     browser.find_element(By.CSS_SELECTOR, '[placeholder="Input your address:"]').send_keys("My Address")
