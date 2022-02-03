@@ -4,7 +4,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 import time
 
 try:
-    link = "http://suninjuly.github.io/registration1.html"
+    link = "http://suninjuly.github.io/registration2.html"
     browser = webdriver.Chrome(executable_path=ChromeDriverManager().install())
     # browser = webdriver.Chrome() это для стандартных настроек webdriver
     browser.get(link)
